@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>The Simpsons Family</h1>
+
+{% for c in characters %}
+  <div class="card">
+    <div class="card-content">
+      <span class="card-title">{{ c.name }}</span>
+      <p>Age: {{ c.age }}</p>
+      <p>Occupation: {{ c.occupation }}</p>
+      <p>Description: {{ c.description }}</p>
+    </div>
+  </div>
+{% endfor %}
+
+{% endblock %}
